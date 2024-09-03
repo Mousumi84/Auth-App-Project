@@ -29,7 +29,7 @@ button {
 }
 
 
-#home {
+.btn {
     border: solid 2px red;
     margin-top: 50px;
 }

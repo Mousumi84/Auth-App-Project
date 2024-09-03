@@ -10,6 +10,7 @@ const Signup = () => {
         const city = e.target.city.value;
         const name = e.target.name.value;
 
+        //---------HTTP REQUEST to send data -----------------------------
         try {
             const response = await axios({
                 url: "https://node-auth-jwt-w78c.onrender.com/auth/signup",
@@ -25,7 +26,7 @@ const Signup = () => {
             console.log(response);
         }
         catch (error) {
-            alert("An error occured")
+            alert("An error occured");
         }
     }
 

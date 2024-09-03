@@ -8,7 +8,7 @@ const Login = ({setisUserLoggedin}) => {
         let email=e.target.email.value;
         let password=e.target.password.value;
     
-    
+     //----------HTTP REQUEST----------------
         try {
             const response = await axios({
                 url: "https://node-auth-jwt-w78c.onrender.com/auth/login",
@@ -20,8 +20,8 @@ const Login = ({setisUserLoggedin}) => {
             });
             console.log(response);
             localStorage.setItem("token",response.data.token);
-            console.log(response.data.token);
-            setisUserLoggedin(false);
+            //console.log(response.data.token);
+            setisUserLoggedin(true);
         }
             
         catch (error) {

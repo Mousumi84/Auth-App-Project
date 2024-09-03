@@ -2,6 +2,14 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 
 function Followers({setisUserLoggedin}) {
+
+    function logout() {
+        console.log(localStorage);
+        localStorage.clear()
+        console.log(localStorage);
+        setisUserLoggedin(false);
+    }
+
     const [followersData,setfollowersData]=useState({
         apiStatus: 0,                  //apiStatus : 0(initial) | 1(pending) | 2(success) | 3(error)
         data: null
@@ -37,7 +45,7 @@ function Followers({setisUserLoggedin}) {
                     setisUserLoggedin(true);
                 }
             }
-        })();
+        })(); 
 
     },[]);
 
@@ -49,14 +57,19 @@ function Followers({setisUserLoggedin}) {
         return <p>Error</p>
     }
 
-
+        let count=0;
     return (<div id="followerslist">
         <h1>Followers List :</h1>
         {
             followersData.data.map(people => {
-                return <h4 key={people.name}>{people.name}</h4>
+                count++;
+                return <h4 key={`${people.name}${count}`}>{people.name}</h4>
             })
         }
+
+
+
+        <button className="btn" onClick={logout}>Logout</button>
     </div>)
 }
 
