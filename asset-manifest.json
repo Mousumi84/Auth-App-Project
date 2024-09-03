@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Auth-App-Project/static/css/main.02831728.css",
+    "main.js": "/Auth-App-Project/static/js/main.a56e42ec.js",
+    "index.html": "/Auth-App-Project/index.html",
+    "main.02831728.css.map": "/Auth-App-Project/static/css/main.02831728.css.map",
+    "main.a56e42ec.js.map": "/Auth-App-Project/static/js/main.a56e42ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02831728.css",
+    "static/js/main.a56e42ec.js"
+  ]
+}
